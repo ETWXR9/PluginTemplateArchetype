@@ -1,0 +1,10 @@
+name: ${mainClass}
+version: ${version}
+main: ${package}.${artifactId}.${mainClass}
+api-version: 1.20
+author: etwxr9
+description: ${mainClass}
+depend: []
+commands:
+    ${artifactId}:
+        description: ${mainClass} Command
