@@ -7,6 +7,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import ${package}.${artifactId}.Cmd.CmdManager;
+import ${package}.${artifactId}.Cmd.CmdSample;
 import ${package}.${artifactId}.Listener.SampleListener;
 
 public class ${mainClass} extends JavaPlugin {
@@ -31,6 +32,8 @@ public class ${mainClass} extends JavaPlugin {
 
         // register command
         getCommand("${artifactId}").setExecutor(new CmdManager());
+        // register subcommand
+        CmdManager.registerSubCommand("sample", new CmdSample());
 
         // register listener
         Bukkit.getPluginManager().registerEvents(new SampleListener(), this);
