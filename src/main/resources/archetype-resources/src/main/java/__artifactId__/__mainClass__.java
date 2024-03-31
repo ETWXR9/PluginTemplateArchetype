@@ -9,10 +9,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import ${package}.${artifactId}.Cmd.CmdManager;
 import ${package}.${artifactId}.Listener.SampleListener;
 
-/**
- * Hello world!
- *
- */
 public class ${mainClass} extends JavaPlugin {
 
     private static ${mainClass} instance;
@@ -26,7 +22,7 @@ public class ${mainClass} extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
-        getLogger().info("Starting up ${mainClass}...");
+        getLogger().info("Starting up ${artifactId}...");
 
         // read config
         saveDefaultConfig();
@@ -34,7 +30,7 @@ public class ${mainClass} extends JavaPlugin {
         config.getString("SampleConfig");
 
         // register command
-        getCommand("${mainClass}").setExecutor(new CmdManager());
+        getCommand("${artifactId}").setExecutor(new CmdManager());
 
         // register listener
         Bukkit.getPluginManager().registerEvents(new SampleListener(), this);
@@ -42,6 +38,6 @@ public class ${mainClass} extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        getLogger().info("Goodbye, World!");
+        getLogger().info("Shutting down ${artifactId}...");
     }
 }
