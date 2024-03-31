@@ -13,10 +13,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
-/*
- * manage all subcommands
- *
- */
+
 public class CmdManager implements CommandExecutor, TabCompleter {
 
     private static HashMap<String, SubCmdBase> subCommands = new HashMap<>();
@@ -39,7 +36,6 @@ public class CmdManager implements CommandExecutor, TabCompleter {
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
-        // 如果没有参数，返回所有子命令
         if (args.length == 1) {
             return List.copyOf(subCommands.keySet());
         }

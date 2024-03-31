@@ -14,12 +14,12 @@ public interface SubCmdBase {
 
     /**
      * Executes the given command, returning its success.
-     * <br>
+     * 
      * If false is returned, then the "usage" plugin.yml entry for this command
      * (if defined) will be sent to the player.
      *
      * @param sender Source of the command
-     * @param args   Passed command arguments(不包括主命令)
+     * @param args   Passed command arguments. Don't include main command
      * @return true if a valid command, otherwise false
      */
     public boolean onSubCommand(Player p, String[] args);
@@ -31,7 +31,7 @@ public interface SubCmdBase {
      *               command inside of a command block, this will be the player,
      *               not the command block.
      * @param args   The arguments passed to the command, including final
-     *               partial argument to be completed(不包括主命令)
+     *               partial argument to be completed Don't include main command
      * @return A List of possible completions for the final argument, or null
      *         to default to the command executor
      */
